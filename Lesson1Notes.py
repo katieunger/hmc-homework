@@ -173,13 +173,17 @@ print gender.lower()
 # # Upper will uppercase all characters in a string
 print gender.upper()
 
-# sentence = "Make me a title"
-# print sentence.title()
+# # Title will uppercase the first letter of each word.
+sentence = "Make me a title"
+print sentence.title()
 
-# print article.count("he said")
-# print article.count("she said")
+# # Count will find all occurences of a string.
+print article.count(" he said")
+print article.count(" she said")
 
 # # Conditionals
+# # Conditionals let you compare things and use the results of the comparisons
+# # to make decisions, or make your program behave differently
 
 # if gender == 'F':
 # 	print "Welcome to Hear Me Code"
