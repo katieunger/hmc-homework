@@ -1,10 +1,11 @@
 # Variables
-bread = 3
-peanutButter = 5
+bread = 2
+peanutButter = 2
 jelly = 1
 sandwiches = bread/2
 
 # Goal 1
+# Create a program that can tell you whether or not you can make a peanut butter and jelly sandwich
 print "Goal 1"
 if bread > 1 and peanutButter >= 1 and jelly >= 1:
 	print "You can make at least one peanut butter and jelly sandwich."
@@ -12,14 +13,16 @@ else:
 	print "You don't have sufficient ingredients to make any peanut butter and jelly sandwiches."
 
 # Goal 2
-# Shouldn't it be that you need at least 2 slices of bread, and 1 pb and 1 jelly per sandwich (2 slices)?
+# Create a program to tell you: if you can make a sandwich, how many you can make
 print "Goal 2"
-if sandwiches > 0 and peanutButter >= 1 and jelly >= 1:
-	print "You can make {0} sandwich(es).".format(sandwiches)
+minIngredientQuantity = min(bread, peanutButter, jelly)
+if bread > 1 and peanutButter >= 1 and jelly >= 1:
+	print "You can make {0} sandwich(es).".format(minIngredientQuantity)
 else:
 	print "You don't have sufficient ingredients to make any peanut butter and jelly sandwiches."
 
 # Goal 3
+# Create a program to allow you to make open-face sandwiches if you have an odd number of slices of bread
 print "Goal 3"
 if sandwiches > 0 and peanutButter >= 1 and jelly >= 1:
 	print "You can make {0} sandwich(es).".format(sandwiches)
@@ -87,9 +90,3 @@ if sandwiches > 0 and peanutButter >= 1 and jelly >= 1:
 			print "There's {0} more jellies than peanut butters.".format(extraJelly)
 else:
 	print "You don't have sufficient ingredients to make any peanut butter and jelly sandwiches."
-
-
-
-
-
-
