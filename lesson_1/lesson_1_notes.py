@@ -60,6 +60,9 @@ print len(twitter)
 
 # # Strings: Slicing
 
+# # Hint: subtract your last number from your first number - this
+# # should give you the correct index
+
 # # The index starts at 0!
 # # This will slice the string stored in the twitter variable
 # # at the index 0 (the first character) - giving me "@""

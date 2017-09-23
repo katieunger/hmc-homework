@@ -1,7 +1,7 @@
 # Variables
 bread = 3
 peanutButter = 7
-jelly = 0
+jelly = 1
 sandwiches = bread/2
 minIngredientQuantity = min(bread, peanutButter, jelly)
 
@@ -42,7 +42,7 @@ else:
 # Goal 4
 # Create a program to tell you: if you're missing ingredients, which ones you need to be able to make your sandwiches
 print "Goal 4"
-print ""
+print "How many peanut butter and jelly sandwiches can I make, and/or how many peanut butter sandwiches can I make?"
 if bread > 1 and peanutButter >= 1 and jelly >= 1:
 	print "You can make {0} peanut butter and jelly sandwich(es).".format(minIngredientQuantity)
 	if bread%2 != 0:
