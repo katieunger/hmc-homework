@@ -359,6 +359,16 @@ while bread >= 2:
 	if bread == 1:
 		print("I'm making an open face sandwich!")
 
+# # Python Resources:
+
+# # The Python Standard Library by Example
+# # Regular Expressions - allows you to look through strings and look for specific patterns
+# # within strings - good for address/quandrant exercise
+# # Data Science from Scratch: First Principles with Python
+# # Wes McKinney also wrote Python for Data Analysis: Data Wrangling with Pandas, NumPy, and
+# # iPython (2nd Edition not out yet)
+# # Python Programming for the Absolute Beginner, 3rd Edition (build games!)
+
 		
 
 
