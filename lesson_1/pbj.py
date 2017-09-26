@@ -1,7 +1,7 @@
 # Variables
-bread = 6
-peanutButter = 3
-jelly = 2
+bread = 4
+peanutButter = 2
+jelly = 1
 sandwiches = bread/2
 minIngredientQuantity = min(sandwiches, peanutButter, jelly)
 
@@ -49,12 +49,16 @@ else:
 # Create a program to tell you: if you have enough bread and peanut butter but no jelly, that you can make a peanut butter sandwich
 print "Goal 4"
 print "How many peanut butter and jelly sandwiches can I make if I can also make peanut butter sandwiches if I run out of jelly?"
+# If I have more than one bread slice, at least one serving of peanut butter, and at least one serving of jelly, I can make as many PB&J sandwiches as the the number of servings of the ingredient I have the least of.
 if bread > 1 and peanutButter >= 1 and jelly >= 1:
 	print "You can make {0} peanut butter and jelly sandwich(es).\n".format(minIngredientQuantity)
-	# If I have leftover peanut butter and bread
-	if (peanutButter - minIngredientQuantity) >= 1 and (bread - minIngredientQuantity) >= 2:
+	# If I have leftover peanut butter and bread, I may be able to make additional peanut butter sandwiches.
+	# I need to figure out how much peanut butter and bread I have leftover after making the PB&J sandwiches.
+	# If I have
+	if (peanutButter - minIngredientQuantity) >= 1 and (bread - minIngredientQuantity) > 1:
 		extraPB = peanutButter - minIngredientQuantity
-		extraBread = bread - minIngredientQuantity
+		# This part is incorrect!
+		extraBread = (bread - minIngredientQuantity)/2
 		# Which do I have the least of, PB or bread?
 		print "You have {0} extra servings of peanut butter.".format(extraPB)
 		print "You have {0} extra slices of bread.".format(extraBread)
@@ -62,6 +66,10 @@ if bread > 1 and peanutButter >= 1 and jelly >= 1:
 		print "You can make {0} peanut butter sandwich(es).\n".format(minButterBread)
 	else:
 		print "You don't have enough leftover bread and peanut butter to make any additional peanut butter sandwiches.\n"
+# If I have more than one bread slice, at least one serving of peanut butter, and no jelly, I can make as many peanut butter sandwiches as whichever ingredient, peanut butter or bread/2, I have the least of.
+elif bread > 1 and peanutButter >= 1 and jelly == 0:
+	minButterBread = min(peanutButter,bread/2)
+	print "You have no jelly, but you can make {0} peanut butter sandwich(es).\n".format(minButterBread)
 else:
 	print "You don't have sufficient ingredients to make any peanut butter and jelly sandwiches.\n"
 
