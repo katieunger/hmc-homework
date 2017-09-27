@@ -1,7 +1,7 @@
 # Variables
-bread = 4
-peanutButter = 3
-jelly = 2
+bread = 5
+peanutButter = 4
+jelly = 1
 sandwiches = bread/2
 minIngredientQuantity = min(sandwiches, peanutButter, jelly)
 
@@ -54,10 +54,9 @@ if bread > 1 and peanutButter >= 1 and jelly >= 1:
 	print "You can make {0} peanut butter and jelly sandwich(es).\n".format(minIngredientQuantity)
 	# If I have leftover peanut butter and bread, I may be able to make additional peanut butter sandwiches.
 	# I need to figure out how much peanut butter and bread I have leftover after making the PB&J sandwiches.
-	# If I have
-	if (peanutButter - minIngredientQuantity) >= 1 and (bread - minIngredientQuantity) > 1:
-		extraPB = peanutButter - minIngredientQuantity
-		extraBread = (bread - minIngredientQuantity*2)
+	extraPB = peanutButter - minIngredientQuantity
+	extraBread = (bread - minIngredientQuantity*2)
+	if extraPB >= 1 and extraBread > 1:
 		# Which do I have the least of, PB or bread?
 		print "You have {0} extra serving(s) of peanut butter.".format(extraPB)
 		print "You have {0} extra slices of bread.".format(extraBread)
@@ -71,23 +70,6 @@ elif bread > 1 and peanutButter >= 1 and jelly == 0:
 	print "You have no jelly, but you can make {0} peanut butter sandwich(es).\n".format(minButterBread)
 else:
 	print "You don't have sufficient ingredients to make any peanut butter and jelly sandwiches.\n"
-
-
-
-# if bread > 1 and peanutButter >= 1 and jelly >= 1:
-# 	print "You can make {0} peanut butter and jelly sandwich(es).\n".format(minIngredientQuantity)
-# elif bread > 1 and peanutButter >= 1 and jelly < 1:
-# 	print "You can make {0} peanut butter sandwich(es).".format(minIngredientQuantity)
-# else:
-# 	print "You don't have sufficient ingredients to make any sandwiches."
-# 	if bread == 0:
-# 		print "You have no bread!"
-# 	elif peanutButter == 0:
-# 		print "You have no peanut butter!"
-# 	elif jelly == 0:
-# 		print "You have no jelly!"
-# 	else:
-# 		print "Error"
 
 # Goal 5
 # Create a program to tell you: if you're missing ingredients, which ones you need to be able to make your sandwiches
