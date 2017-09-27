@@ -1,7 +1,7 @@
 # Variables
 bread = 4
-peanutButter = 2
-jelly = 1
+peanutButter = 3
+jelly = 2
 sandwiches = bread/2
 minIngredientQuantity = min(sandwiches, peanutButter, jelly)
 
@@ -57,10 +57,9 @@ if bread > 1 and peanutButter >= 1 and jelly >= 1:
 	# If I have
 	if (peanutButter - minIngredientQuantity) >= 1 and (bread - minIngredientQuantity) > 1:
 		extraPB = peanutButter - minIngredientQuantity
-		# This part is incorrect!
-		extraBread = (bread - minIngredientQuantity)/2
+		extraBread = (bread - minIngredientQuantity*2)
 		# Which do I have the least of, PB or bread?
-		print "You have {0} extra servings of peanut butter.".format(extraPB)
+		print "You have {0} extra serving(s) of peanut butter.".format(extraPB)
 		print "You have {0} extra slices of bread.".format(extraBread)
 		minButterBread = min(extraPB, extraBread/2)
 		print "You can make {0} peanut butter sandwich(es).\n".format(minButterBread)
