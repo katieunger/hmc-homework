@@ -1,5 +1,5 @@
 # Variables
-bread = 5
+bread = 0
 peanutButter = 4
 jelly = 1
 sandwiches = bread/2
@@ -74,17 +74,17 @@ else:
 # Goal 5
 # Create a program to tell you: if you're missing ingredients, which ones you need to be able to make your sandwiches
 print "Goal 5"
-if sandwiches > 0 and peanutButter >= 1 and jelly >= 1:
+# If I have more than one bread slice, at least one serving of peanut butter, and at least one serving of jelly, I can make as many PB&J sandwiches as the the number of servings of the ingredient I have the least of.
+if bread > 1 and peanutButter >= 1 and jelly >= 1:
 	print "You can make {0} peanut butter and jelly sandwich(es).".format(sandwiches)
-	if bread%2 != 0:
-		if peanutButter%2 != 0 and jelly%2 != 0:
-			print "You have an odd number of bread slices, and an odd amount of peanut butter and jelly. You can also make an open-face sandwich."
-		else:
-			print "You have an odd number of bread slices, but not an odd amount of peanut butter and jelly. You can't make an additional open-face sandwich."
+elif minIngredientQuantity == 0:
+	print "You're missing an ingredient."
+	if jelly == 0:
+		print "You have no jelly!"
+	elif bread == 0:
+		print "You have no bread!"
 	else:
-		print "You have an even number of bread slices, so you don't have any leftover bread to make open-face sandwiches."
-elif sandwiches > 0 and peanutButter >= 1 and jelly < 1:
-	print "You can make {0} peanut butter sandwich(es).".format(sandwiches)
+		print "You have no peanut butter!"
 else:
 	print "You don't have sufficient ingredients to make any sandwiches."
 
