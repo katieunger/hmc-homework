@@ -1,5 +1,5 @@
 # Variables
-bread = 0
+bread = 4
 peanutButter = 4
 jelly = 1
 sandwiches = bread/2
@@ -76,7 +76,8 @@ else:
 print "Goal 5"
 # If I have more than one bread slice, at least one serving of peanut butter, and at least one serving of jelly, I can make as many PB&J sandwiches as the the number of servings of the ingredient I have the least of.
 if bread > 1 and peanutButter >= 1 and jelly >= 1:
-	print "You can make {0} peanut butter and jelly sandwich(es).".format(sandwiches)
+	print "You can make {0} peanut butter and jelly sandwich(es).".format(minIngredientQuantity)
+# If I'm out of an ingredient:
 elif minIngredientQuantity == 0:
 	print "You're missing an ingredient."
 	if jelly == 0:
@@ -87,26 +88,3 @@ elif minIngredientQuantity == 0:
 		print "You have no peanut butter!"
 else:
 	print "You don't have sufficient ingredients to make any sandwiches."
-
-# Goal 6
-print "Goal 6"
-if sandwiches > 0 and peanutButter >= 1 and jelly >= 1:
-	print "You can make at least one sandwich!"
-	if peanutButter == jelly:
-		print "There's an equal amount of peanut butter and jelly."
-		if peanutButter or jelly <= sandwiches:
-			print "There's more peanut butter or jelly than slices of bread to make sandwiches."
-			print "The maximum number of sandwiches you can make is {0}.".format(sandwiches)
-		else:
-			print "There's more bread than there is peanut butter and jelly."
-			print "The maximum number of sandwiches you can make is {0}.".format(jelly)
-	else:
-		print "Uh oh, there isn't an equal amount of peanut butter and jelly."
-		if peanutButter > jelly:
-			extraPB = peanutButter - jelly
-			print "There's {0} more peanut butters than jellies.".format(extraPB)
-		else:
-			extraJelly = jelly - peanutButter
-			print "There's {0} more jellies than peanut butters.".format(extraJelly)
-else:
-	print "You don't have sufficient ingredients to make any peanut butter and jelly sandwiches."
