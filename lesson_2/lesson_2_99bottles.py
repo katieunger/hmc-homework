@@ -22,7 +22,7 @@
 
 # Using range() and a loop, print out the song.  Your output should look like this:
 
-for number in range(100):
+for number in range(99, 1, -1):
 	print("{0} bottles of beer on the wall, {0} bottles of beer... \nIf one of those bottles should happen to fall, {1} bottles of beer on wall").format(number,number-1)
 
 # 99 bottles of beer on the wall, 99 bottles of beer ...
