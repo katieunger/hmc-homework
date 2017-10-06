@@ -33,11 +33,24 @@
 # Goal #1: Write a new version of the PB&J program that uses a while loop.  Print "Making sandwich #" and the number of the sandwich until you are out of bread, peanut butter, or jelly.
 
 # Variables
-bread = 4
+bread = 5
 peanutButter = 3
 jelly = 10
 sandwiches = bread/2
 minIngredientQuantity = min(sandwiches, peanutButter, jelly)
+ingredientsArray = [bread, peanutButter, jelly]
 
 for number in range(minIngredientQuantity):
-	print("Making sandwich {0}".format(number+1))
+	print("Making sandwich #{0}".format(number+1))
+	bread = bread-2
+	peanutButter = peanutButter-1
+	jelly = jelly-1
+	sandwiches = bread/2
+	if sandwiches == 0:
+		print("All done; only had enough bread for {0} sandwiches.".format(number+1))
+	elif peanutButter == 0:
+		print("All done; only had enough peanut butter for {0} sandwiches.".format(number+1))
+	elif jelly == 0:
+		print("All done; only had enough jelly for {0} sandwiches.".format(number+1))
+	else:
+		print("I can make another sandwich...")
