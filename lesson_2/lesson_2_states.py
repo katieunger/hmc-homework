@@ -6,6 +6,8 @@
 # These should all be strings, since they're names of places
 # Instead of having to type them all out, I really like liststates.com -- you can even customize the format it gives you the states in to make it super easy to copy/paste into your code here
 
+# # But it doesn't make the state abbreviation list in the same order as the state list! AAAAHHH!
+
 # Step 2: Create your loop
 # Essentially, you're telling Python: for each state in my list: print this HTML code
 # A good place to start is by printing the name of the state in the loop; after that you can add the HTML around it
@@ -30,8 +32,14 @@
 
 stateList = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District Of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
 
-print("<select>")
-for state in stateList:
-	print("<option value='stateAbbreviation'>{0}</option>".format(state))
+stateAbbreviationList = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "MN", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
+
+if (len(stateList)==len(stateAbbreviationList)):
+	print("<select>")
+	for index, state in enumerate(stateList):
+		stateAbbrev = stateAbbreviationList[index]
+		print("<option value='{0}'>{1}</option>".format(stateAbbrev, state))
+else:
+	print("State list and state abbreviation list aren't the same length! You'll get an error!")
 print("</select>")
 
