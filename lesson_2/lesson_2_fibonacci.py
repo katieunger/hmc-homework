@@ -11,17 +11,33 @@
 # Create a program that will generate the first 10 numbers in the Fibonacci Sequence.
 
 # When completed, your program should have the output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-numberList = []
-for number in range(10):
-	numberList.append(number)
-print("Number List:{0}".format(numberList))
+# numberList = []
+# for number in range(10):
+# 	numberList.append(number)
+# print("Number List:{0}".format(numberList))
 
-FibonacciList = []
-for index, number in enumerate(numberList):
-	if(number==0):
-		previousNumber = 0
-	else:
-		previousNumber = numberList[index-1]
-	print("{0}+{1}".format(previousNumber,number))
-	FibonacciList.append(previousNumber+number)
-print FibonacciList
+# FibonacciList = numberList
+# for index, number in enumerate(FibonacciList):
+# 	previousNumber = FibonacciList[index-1]
+# 	print("Adding {0}+{1}").format(previousNumber,number)
+# 	numberToAdd = previousNumber + number
+# 	FibonacciList.append(numberToAdd)
+# 	print(FibonacciList)
+# 		#FibonacciList.append(previousNumber+numberToAdd)
+# #print FibonacciList
+
+# Create list to hold sequence
+FibonacciList = [0,1]
+for number in range(10):
+	# # If FibonacciList has had numbers added to it, we need to get the previous number
+	# if (len(FibonacciList) > 0):
+	# 	previousNumber = FibonacciList[number-1]
+	# else:
+	# 	previousNumber = 0
+	print("{0}+{1}").format(FibonacciList[-1],FibonacciList[-2])
+	FibonacciList.append(FibonacciList[-1]+FibonacciList[-2])
+	# currentNumber = FibonacciList[number]
+	# print("Adding {0} + {1}".format(previousNumber, currentNumber))
+	# summedNumber = previousNumber + currentNumber
+	# FibonacciList.append(summedNumber)
+print(FibonacciList)
