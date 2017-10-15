@@ -37,3 +37,6 @@ bechdelRatingsList = [1,3,1,3,2]
 imdbRatingsList = [8.2,8.5,8.2,8.2,8.2]
 genresList = ["Sci-Fi","Horror","Comedy","Animation","Drama"]
 
+if (len(movieTitlesList) == len(parentalRatingsList) == len(imdbRatingsList) == len(genresList)):
+	for movie in zip(movieTitlesList, parentalRatingsList, bechdelRatingsList, imdbRatingsList, genresList):
+		print(movie)
