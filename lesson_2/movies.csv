@@ -1,0 +1,6 @@
+('Title', 'Parental Rating', 'Bechdel Rating', 'IMDB Rating', 'Genre')
+('Blade Runner', 'R', 1, 8.2, 'Sci-Fi')
+('Alien', 'R', 3, 8.5, 'Horror')
+('The Big Lebowski', 'R', 1, 8.2, 'Comedy')
+('My Neighbor Totoro', 'G', 3, 8.2, 'Animation')
+('Trainspotting', 'R', 2, 8.2, 'Drama')

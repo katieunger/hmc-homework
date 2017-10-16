@@ -1,7 +1,7 @@
 # Variables
-bread = 4
-peanutButter = 4
-jelly = 1
+bread = 8
+peanutButter = 6
+jelly = 0
 sandwiches = bread/2
 minIngredientQuantity = min(sandwiches, peanutButter, jelly)
 
