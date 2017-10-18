@@ -22,23 +22,26 @@
 
 # # Lists
 
-# # Lists are containers that can hold multiple pieces of information. They can hold:
-# # strings, numbers, etc.
+# # Lists are containers that can hold multiple pieces of information. They can hold strings, numbers, etc.
 
-# # Variables
+# # Lists: Syntax
 
+# # Lists are created by placing items inside of square brackets: []
+# # Items in a list are separated by commas
+
+# # Holding the name of each attendee in a separate variable isn't efficient:
 attendee1 = 'Katie'
 attendee2 = 'Michelle'
 attendee3 = 'Di'
 
+# # Below is a list of attendees:
 attendees = ['Katie', 'Michelle', 'Di', 'Lauren', 'Sam']
 print attendees
 
-# # Items are separated by commas
-
 # # An empty lists looks like []
-
 people_who_didnt_do_pbj = []
+
+# # Lists: Slicing
 
 # # To add to the end of a list, use .append() method
 
