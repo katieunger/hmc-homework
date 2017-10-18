@@ -36,15 +36,26 @@ attendee3 = 'Di'
 
 # # Below is a list of attendees:
 attendees = ['Katie', 'Michelle', 'Di', 'Lauren', 'Sam']
-print attendees
+print(attendees)
 
 # # An empty lists looks like []
 people_who_didnt_do_pbj = []
 
 # # Lists: Slicing
 
-# # To add to the end of a list, use .append() method
+# # A list can be sliced like a string can be sliced
+# # Instead of printing characters by index, this will print items in the list by index
+# # This will print the first two items in the list:
+print(attendees[0:2])
+# # This will print the fourth item in the list:
+print(attendees[3])
 
+# # Lists: Length
+# # The length of the list can be calculated using len()
+print(len(attendees))
+
+# # Lists: Adding Items
+# # To add to the end of a list, use .append() method
 attendees.append('Allie')
 print attendees
 
