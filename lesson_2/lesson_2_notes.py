@@ -35,7 +35,7 @@ attendee2 = 'Michelle'
 attendee3 = 'Di'
 
 # # Below is a list of attendees:
-attendees = ['Katie', 'Michelle', 'Di', 'Lauren', 'Sam']
+attendees = ['Katie', 'Michelle', 'Di', 'Lauren', 'Sam', 'Allie', 'Samantha', 'Lisa', 'Jocelyn', 'Stacey', 'Tamar', 'Megan', 'Katie', 'Kelly', 'JihFan', 'Serena', 'Claudia']
 print(attendees)
 
 # # An empty lists looks like []
@@ -45,30 +45,12 @@ people_who_didnt_do_pbj = []
 
 # # A list can be sliced like a string can be sliced
 # # Instead of printing characters by index, this will print items in the list by index
-# # This will print the first two items in the list:
+# # This will print the first two people in the list:
 print(attendees[0:2])
-# # This will print the fourth item in the list:
+# # This will print the fourth person in the list:
 print(attendees[3])
-
-# # Lists: Length
-# # The length of the list can be calculated using len()
-print(len(attendees))
-
-# # Lists: Adding Items
-# # To add to the end of a list, use .append() method
-attendees.append('Allie')
-print attendees
-
-# # To add multiple items to the end of a list, use .extend() method
-# attendees.extend(['Allie', 'Shannon'])
-print attendees
-
-# # To get all attendees on list (without print attendees), using slice:
+# # To print all attendees on list using slice:
 print(attendees[:])
-
-# # To print first two people:
-print(attendees[:2])
-
 # # To print last three people:
 # # We could use negative indexing like this
 # # This could be useful if you don't know how long your list is
@@ -77,18 +59,23 @@ print(attendees[-3:])
 
 # # Lists: Length
 
-attendees = ['Katie', 'Michelle', 'Di', 'Lauren', 'Sam', 'Allie', ' Samantha', 'Lisa', 'Jocelyn', 'Stacey', 'Tamar', 'Megan', 'Katie', 'Kelly', 'JihFan', 'Serena', 'Claudia']
-
+# # The length of the list can be calculated using len()
 print(len(attendees))
 
 # # Lists: Adding Items
-# attendees.append()
+
+# # To add to the end of a list, use .append() method
+attendees.append('Mary')
+print(attendees)
 
 # # Lists: Changing Existing Items
+
+# # An item in a list can be changed by getting the item using its index and setting it
 attendees_ages = [28, 36, 32, 18, 25, 28]
 
-# # To get the first age in the list:
-print attendees_ages[0]
+# # To get the first age in the list and change it:
+attendees_ages[0] = 29
+print(attendees_ages)
 
 # # Lists: Deleting Existing Items
 
