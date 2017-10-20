@@ -36,7 +36,7 @@ attendee3 = 'Di'
 
 # # Below is a list of attendees:
 attendees = ['Katie', 'Michelle', 'Di', 'Lauren', 'Sam', 'Allie', 'Samantha', 'Lisa', 'Jocelyn', 'Stacey', 'Tamar', 'Megan', 'Katie', 'Kelly', 'JihFan', 'Serena', 'Claudia']
-print(attendees)
+print("Attendees list: {0}\n".format(attendees))
 
 # # An empty lists looks like []
 people_who_didnt_do_pbj = []
@@ -46,48 +46,51 @@ people_who_didnt_do_pbj = []
 # # A list can be sliced like a string can be sliced
 # # Instead of printing characters by index, this will print items in the list by index
 # # This will print the first two people in the list:
-print(attendees[0:2])
+print("First two people in attendees list: {0}\n".format(attendees[0:2]))
 # # This will print the fourth person in the list:
-print(attendees[3])
+print("Fourth person in attendees list: {0}\n".format(attendees[3]))
 # # To print all attendees on list using slice:
-print(attendees[:])
+print("Printing the attendees list again using attendees[:]: {0}\n".format(attendees[:]))
 # # To print last three people:
 # # We could use negative indexing like this
 # # This could be useful if you don't know how long your list is
 # # (Though you can just get the length of the list using len())
-print(attendees[-3:])
+print("Last three people in attendees list: {0}\n".format(attendees[-3:]))
 
 # # Lists: Length
 
 # # The length of the list can be calculated using len()
-print(len(attendees))
+print("Length of attendees list: {0}\n".format(len(attendees)))
 
 # # Lists: Adding Items
 
 # # To add to the end of a list, use .append() method
 attendees.append('Mary')
-print(attendees)
+print("Adding 'Mary' to end of attendees list: {0}\n".format(attendees))
 
 # # Lists: Changing Existing Items
 
 # # An item in a list can be changed by getting the item using its index and setting it
 attendees_ages = [28, 36, 32, 18, 25, 28]
+print("Attendees' ages list: {0}\n".format(attendees_ages))
 
 # # To get the first age in the list and change it:
 attendees_ages[0] = 29
-print(attendees_ages)
+print("Changed first age in attendees' ages list to 29: {0}\n".format(attendees_ages))
 
 # # Lists: Deleting Existing Items
 
 days_of_week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+print("Days of week list: {0}\n".format(days_of_week))
+# # An item can be removed from a list using pop()
+# # This will remove the last item from the list:
 day = days_of_week.pop()
-print day
+print("Last day removed from days of week list: {0}\n".format(day))
+# # This will remove the fourth item from the list:
 day = days_of_week.pop(3)
-print day
-print days_of_week
-# # Saturday and Wednesday have been removed from the list entirely!
+print("Fourth day removed from days of week list: {0}\n".format(day))
+print("Days of week list now looks like: {0}\n".format(days_of_week))
 
-# # pop() method removes item from the list!
 # # To store removed item:
 TA = attendees.pop(9)
 print TA
