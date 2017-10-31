@@ -94,21 +94,20 @@ print("Days of week list now looks like: {0}\n".format(days_of_week))
 # # To store removed item:
 # # This will store the name of the TA in a variable
 TA = attendees.pop(9)
-print("Our TA is {0}".format(TA))
-print("Now our attendees list looks like: {0}".format(attendees))
-print("The length of the attendees list is now: {0}".format(len(attendees)))
+print("Our TA is {0}\n".format(TA))
+print("Now our attendees list looks like: {0}\n".format(attendees))
+print("The length of the attendees list is now: {0}\n".format(len(attendees)))
 
 # # Lists: Quick Exercise
 months = ['January', 'February']
+print("Months list: {0}\n".format(months))
 months.append('March')
-print months
+print("Append() adds one item at a time: {0}\n".format(months))
 months.extend(['April', 'May', 'June'])
-print months
+print("Extend() adds multiple items: {0}\n".format(months))
 monthsToAdd = ['July', 'August', 'September', 'October', 'November', 'December']
-# months.append(monthsToAdd)
-# print months
 months.extend(monthsToAdd)
-print months
+print("Adding all months: {0}\n".format(months))
 
 # # Append() will always add item at end of list
 
