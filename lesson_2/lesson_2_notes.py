@@ -92,10 +92,11 @@ print("Fourth day removed from days of week list: {0}\n".format(day))
 print("Days of week list now looks like: {0}\n".format(days_of_week))
 
 # # To store removed item:
+# # This will store the name of the TA in a variable
 TA = attendees.pop(9)
-print TA
-print attendees
-print (len(attendees))
+print("Our TA is {0}".format(TA))
+print("Now our attendees list looks like: {0}".format(attendees))
+print("The length of the attendees list is now: {0}".format(len(attendees)))
 
 # # Lists: Quick Exercise
 months = ['January', 'February']
