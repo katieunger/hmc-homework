@@ -131,8 +131,8 @@ print("Printing month by index - months[8] is: {0}\n".format(thisMonth))
 # # In this example, every time Python sees a space, it will use that to know
 # # where to split the string into a list (you can split on any character)
 addressTest = '1133 19th St. Washington, DC 20036'
-address_as_list = addressTest.split(" ")
-print(address_as_list)
+addressAsList = addressTest.split(" ")
+print("Printing address as a list using split(' '): {0}\n".format(addressAsList))
 
 # # Lists: Membership
 # # The in keyword allows you to check whether a value exists in the list
@@ -140,9 +140,10 @@ print(address_as_list)
 # # Also works with strings!
 
 nameCheck = 'ann' in 'Shannon'
-print nameCheck
+print("Using 'in' to see if 'ann' is in string 'Shannon' - will return a boolean: {0}\n".format(nameCheck))
 
-print 'Frankenstein' in attendees
+frankensteinMembership = 'Frankenstein' in attendees
+print("Using 'in' to see if 'Frankenstein' is in attendees list - will return a boolean: {0}\n".format(frankensteinMembership))
 
 # # Lists: Exercise
 # Use raw_input() to allow a user to type
