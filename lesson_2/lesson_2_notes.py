@@ -37,6 +37,7 @@ attendee3 = 'Di'
 # # Below is a list of attendees:
 attendees = ['Katie', 'Michelle', 'Di', 'Lauren', 'Sam', 'Allie', 'Samantha', 'Lisa', 'Jocelyn', 'Stacey', 'Tamar', 'Megan', 'Katie', 'Kelly', 'JihFan', 'Serena', 'Claudia']
 print("Attendees list: {0}\n".format(attendees))
+# # In Python 3, print is defined as a function so we print like this: print("Print me")
 
 # # An empty lists looks like []
 people_who_didnt_do_pbj = []
@@ -115,18 +116,15 @@ print("Adding all months: {0}\n".format(months))
 
 # # Remove the first month:
 months.pop(0)
-print months
+print("Removing first month using pop(): {0}\n".format(months))
 
 # # Insert 'January' before index 0:
 months.insert(0, 'January')
-print months
+print("Adding January back using insert(): {0}\n".format(months))
 
 # # To get an item from a list without removing it:
 thisMonth = months[8]
-print thisMonth
-
-# # In Python 3, print is defined as a function so we print like this:
-print(thisMonth)
+print("Printing month by index - months[8] is: {0}\n".format(thisMonth))
 
 # # Lists: Strings to Lists
 
