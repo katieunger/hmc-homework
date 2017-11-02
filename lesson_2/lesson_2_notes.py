@@ -249,16 +249,22 @@ addresses = [address1, address2, address3]
 # else:
 # 	print("Not in any quadrant!")
 
-print(quadrantList)
+# # print(quadrantList)
 
 # # Allow user to enter 3 addresses; after three, print the length and contents of each list
 
 # # Try Code Academy Intro to Terminal!
 
-# # Ranges
+# # Lists: Ranges of Numbers
+
+# # The range function generates a list of numbers
+print("Creating a list of numbers using range(): {0}\n".format(range(5)))
+# # The range function can be provided with a start and a stop
+print("Creating a list of numbers using range with start and stop: {0}\n".format(range(5, 10)))
+# # We can use range when we need to do a task a certain number of times
 
 for number in range(1,11):
-	print number
+	print("Printing numbers in range(1,11): {0}".format(number))
 
 # # Try quandrant exercise with loops
 
