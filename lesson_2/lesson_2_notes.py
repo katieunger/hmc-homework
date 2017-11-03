@@ -266,20 +266,22 @@ print("Creating a list of numbers using range with start and stop: {0}\n".format
 for number in range(1,11):
 	print("Printing numbers in range(1,11): {0}".format(number))
 
-# # Try quandrant exercise with loops
+# # Loops: For Loop Exercise
+# # Try quadrant exercise with loops instead of repeating if statements
 
 for address in addresses:
-	if " NW " in address:
+	if "NW" in address:
 		NW.append(address)
-	elif " NE " in address:
+	elif "NE" in address:
 		NE.append(address)
-	elif " SW " in address:
+	elif "SW" in address:
 		SW.append(address)
-	elif " SE " in address:
+	elif "SE" in address:
 		SE.append(address)
 	else:
 		other.append(address)
-print quadrantList
+print("\nThis list of addresses grouped by quadrant was made with a loop:\n(List 1 = NW, List 2 = NE, List 3 = SE, List 4 = SW, List 5 = Other)")
+print("{0}\n".format(quadrantList))
 
 # # How to deal with SEA LANE?
 
