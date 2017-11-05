@@ -147,9 +147,7 @@ print("Using 'in' to see if 'Frankenstein' is in attendees list - will return a 
 
 # # Lists: Exercise
 
-# # See quadrants.py
-
-# # Try Code Academy Intro to Terminal!
+# # See quadrants.py for quadrant list exercise
 
 # # Lists: Ranges of Numbers
 
@@ -159,25 +157,27 @@ print("Creating a list of numbers using range(): {0}\n".format(range(5)))
 print("Creating a list of numbers using range with start and stop: {0}\n".format(range(5, 10)))
 # # We can use range when we need to do a task a certain number of times
 
+print("Printing numbers in range(1,11):\n")
 for number in range(1,11):
-	print("Printing numbers in range(1,11): {0}".format(number))
+	print(number)
 
 # # Loops: For Loop Exercise
-# # Try quadrant exercise with loops instead of repeating if statements
+# # See quadrants.py for quadrant list exercise
 
-# # See quadrants.py
+# # Loops: For Loop
 
 # # Simple loop for printing days of the week
-
 days_of_week = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
+print ("\nPrinting days of the week:\n")
 for day in days_of_week:
-	print day
+	print(day)
 
 # # Loops: Nested For Loops
 
 months_in_year = ["January","February","March","April","May","June","July","August","September","October","November","December"]
 
+# # This loop will print 4 weeks with 7 days per week for each month of the year
 for month in months_in_year:
 	print "\n" + month + "\n"
 	for week in range(1,5):
@@ -189,67 +189,53 @@ for month in months_in_year:
 # # enumerate() is a function that you use with a for loop to get the index (position) of that list item, too.
 # # Commonly used when you need to change each item in a list one at a time.
 
+# # This loop will print each month and its index
 # # Put underscore in front of variables that may be reserved keywords
-# # PEP 8 = conventions for Python coding
 for _index, month in enumerate(months_in_year):
 	print(_index)
 	print(month)
 
-# # So if I want to change just February to 'Febrewary'
-# for _index, month in enumerate(months_in_year):
-# 	if (month == 'February'):
-# 		febIndex = _index
-# 		print(febIndex)
-# 	else:
-# 		print("February not found!")
-# 	if febIndex:
-# 		months_in_year[febIndex] = "Febrewary"
-# 		print months_in_year
+# So if I want to change just February to 'Febrewary'
+for _index, month in enumerate(months_in_year):
+	if (month == 'February'):
+		febIndex = _index
+
+months_in_year[febIndex] = "Febrewary"
+print(months_in_year)
 
 
 # # Loops: Zip
 
+# # A for loop iterates over each item in a single list one at a time
+# # zip() can be used to combine lists into a single list so that items from multiple lists can be used in a loop together
 states = ['Arizona', 'Virginia', 'Maryland']
 stateAbbreviation = ['AZ', 'VA', 'MD', 'RI']
 
 for items in zip(states, stateAbbreviation):
-	print items
+	print(items)
+
+# # Note that RI is left off because the two lists have different lengths
 
 # # Loops: While
 
-# # A for loop lets you use each item in a single list one at a time,
-# # which is great for performing actions a certain number of times.
+# # A for loop lets you use each item in a single list one at a time, which is great for performing actions a certain number of times.
+# # Loops using while function like conditionals - will perform an action while a condition is true
 
-bread = 8
+# This loop will print a message about making a sandwich and subtract 2 from bread until bread is no longer greater than or equal to 2
 
-if bread >= 2:
-	print "I'm making a sandwich"
+bread = 9
 
 while bread >= 2:
-	print "I'm making a sandwich"
+	print("I'm making a sandwich")
 	# # bread = bread - 2
 	# # Shorthand:
 	bread -= 2
+	print("I now have {0} slices of bread left".format(bread))
 	# # This does something else!
 	# # bread =- 2
 	# # Make an open face sandwich:
 	if bread == 1:
 		print("I'm making an open face sandwich!")
-
-# # Python Resources:
-
-# # The Python Standard Library by Example
-# # Regular Expressions - allows you to look through strings and look for specific patterns
-# # within strings - good for address/quandrant exercise
-# # Data Science from Scratch: First Principles with Python
-# # Wes McKinney also wrote Python for Data Analysis: Data Wrangling with Pandas, NumPy, and
-# # iPython (2nd Edition not out yet)
-# # Python Programming for the Absolute Beginner, 3rd Edition (build games!)
-
-		
-
-
-
 
 
 

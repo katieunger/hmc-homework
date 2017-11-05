@@ -66,6 +66,7 @@ other = []
 
 quadrantList = [NW, NE, SE, SW, other]
 
+# # Try quadrant exercise with loops instead of repeating if statements
 # # Using a loop to group addresses by quadrant:
 for address in addresses:
 	if "NW" in address:
