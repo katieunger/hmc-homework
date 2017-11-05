@@ -146,112 +146,8 @@ frankensteinMembership = 'Frankenstein' in attendees
 print("Using 'in' to see if 'Frankenstein' is in attendees list - will return a boolean: {0}\n".format(frankensteinMembership))
 
 # # Lists: Exercise
-# Use raw_input() to allow a user to type
-# address = raw_input("What is your address? ")
 
-# # For now, let's just create lists:
-NW = []
-NE = []
-SE = []
-SW = []
-other = []
-
-quadrantList = [NW, NE, SE, SW, other]
-
-# if "NW" in address:
-# 	NW.append(address)
-# elif "NE" in address:
-# 	NE.append(address)
-# elif "SE" in address:
-# 	SE.append(address)
-# elif "SW" in address:
-# 	SW.append(address)
-# else:
-# 	other.append(address)
-# 	print("Not in any quadrant!")
-
-address1 = "815 16 St NW Washington D.C. 20005"
-address2 = "123 SEA LANE SW"
-address3 = "125 L'Enfant Plaza SW Washington D.C. 22033"
-
-addresses = [address1, address2, address3]
-
-# print(addresses)
-
-# # # If that address contains a quadrant (NW, NE, SE, SW), then add it to that quadrant's list
-
-# if "NW" in address1:
-# 	NW.append(address1)
-# elif "NE" in address1:
-# 	NE.append(address1)
-# elif "SE" in address1:
-# 	SE.append(address1)
-# elif "SW" in address1:
-# 	SW.append(address1)
-# else:
-# 	print("Not in any quadrant!")
-
-# if "NW" in address2:
-# 	NW.append(address2)
-# elif "NE" in address2:
-# 	NE.append(address2)
-# elif "SE" in address2:
-# 	SE.append(address2)
-# elif "SW" in address2:
-# 	SW.append(address2)
-# else:
-# 	print("Not in any quadrant!")
-
-# if "NW" in address3:
-# 	NW.append(address3)
-# elif "NE" in address3:
-# 	NE.append(address3)
-# elif "SE" in address3:
-# 	SE.append(address3)
-# elif "SW" in address3:
-# 	SW.append(address3)
-# else:
-# 	print("Not in any quadrant!")
-
-# print(quadrantList)
-
-# # # Do the same thing using OR
-# # # This doesn't work right...
-
-# if "NW" in (address1 or address2 or address3):
-# 	if "NW" in address1:
-# 		NW.append(address1)
-# 	if "NW" in address2:
-# 		NW.append(address2)
-# 	if "NW" in address3:
-# 		NW.append(address3)
-# elif "NE" in (address1 or address2 or address3):
-# 	if "NE" in address1:
-# 		NE.append(address1)
-# 	if "NE" in address2:
-# 		NE.append(address2)
-# 	if "NE" in address3:
-# 		NE.append(address3)
-# elif "SE" in (address1 or address2 or address3):
-# 	if "SE" in address1:
-# 		SE.append(address1)
-# 	if "SE" in address2:
-# 		SE.append(address2)
-# 	if "SE" in address3:
-# 		SE.append(address3)
-# elif "SW" in (address1 or address2 or address3):
-# 	if "SW" in address1:
-# 		SW.append(address1)
-# 	if "SW" in address2:
-# 		SW.append(address2)
-# 	if "SW" in address3:
-# 		SW.append(address3)
-# else:
-# 	print("Not in any quadrant!")
-
-# # print(quadrantList)
-
-# # Allow user to enter 3 addresses; after three, print the length and contents of each list
+# # See quadrants.py
 
 # # Try Code Academy Intro to Terminal!
 
@@ -269,37 +165,7 @@ for number in range(1,11):
 # # Loops: For Loop Exercise
 # # Try quadrant exercise with loops instead of repeating if statements
 
-for address in addresses:
-	if "NW" in address:
-		NW.append(address)
-	elif "NE" in address:
-		NE.append(address)
-	elif "SW" in address:
-		SW.append(address)
-	elif "SE" in address:
-		SE.append(address)
-	else:
-		other.append(address)
-print("\nThis list of addresses grouped by quadrant was made with a loop:\n(List 1 = NW, List 2 = NE, List 3 = SE, List 4 = SW, List 5 = Other)")
-print("{0}\n".format(quadrantList))
-
-# # How to deal with SEA LANE?
-
-# # This puts addresses in quadrant lists more than once
-for address in addresses:
-	addressAsList = address.split(' ')
-
-	if "NW" in addressAsList:
-		NW.append(address)
-	elif "NE" in addressAsList:
-		NE.append(address)
-	elif "SW" in addressAsList:
-		SW.append(address)
-	elif "SE" in addressAsList:
-		SE.append(address)
-	else:
-		other.append(address)
-print quadrantList
+# # See quadrants.py
 
 # # Simple loop for printing days of the week
 
