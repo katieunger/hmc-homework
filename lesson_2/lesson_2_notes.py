@@ -147,7 +147,7 @@ print("Using 'in' to see if 'Frankenstein' is in attendees list - will return a 
 
 # # Lists: Exercise
 
-# # See quadrants.py for quadrant list exercise
+# # See lesson_2_quadrants.py for quadrant list exercise
 
 # # Lists: Ranges of Numbers
 
@@ -162,7 +162,7 @@ for number in range(1,11):
 	print(number)
 
 # # Loops: For Loop Exercise
-# # See quadrants.py for quadrant list exercise
+# # See lesson_2_quadrants.py for quadrant list exercise
 
 # # Loops: For Loop
 
