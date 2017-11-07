@@ -3,9 +3,17 @@
 # # Use raw_input() to allow a user to type
 # # Allow user to enter 3 addresses; after three, print the length and contents of each list
 # address = raw_input("What is your address? ")
+# To run this, use terminal:
+# cd to file location
+# Execute the file using the Python interpreter:
+# (type python and then the filename)
+# or use chmod to change the access mode of the file:
+# (type chmod a+x and then the filename)
+# This gives permission to all users to execute the file
+# However, I still got syntax errors using this approach because
+# the file was not being executed using Python interpreter
 
-# The syntax is as follows for Python v3.x as raw_input() was renamed to input() :
-
+# For Python v3.x as raw_input() was renamed to input()
 address1 = raw_input("Enter address 1: ")
 print(address1)
 address2 = raw_input("Enter address 2: ")
