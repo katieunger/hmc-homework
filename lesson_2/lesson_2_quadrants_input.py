@@ -31,7 +31,10 @@ other = []
 quadrantList = [NW, NE, SE, SW, other]
 
 for address in addresses:
-	addressAsList = address.split(' ')
+	# # Capitalize address
+	addressCapitalized = address.upper()
+	# # Split address on space character, transforming string into a list
+	addressAsList = addressCapitalized.split(' ')
 	if "NW" in addressAsList:
 		NW.append(address)
 	elif "NE" in addressAsList:
@@ -42,4 +45,9 @@ for address in addresses:
 		SE.append(address)
 	else:
 		other.append(address)
-print("List of addresses grouped by quadrant, made using a loop and splitting addresses on ' ':\n{0}\n".format(quadrantList))
+		
+print("NW List: {0}".format(quadrantList[0]))
+print("NE List: {0}".format(quadrantList[1]))
+print("SE List: {0}".format(quadrantList[2]))
+print("SW List: {0}".format(quadrantList[3]))
+print("Other List: {0}".format(quadrantList[4]))
