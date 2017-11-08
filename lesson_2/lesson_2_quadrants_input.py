@@ -14,19 +14,12 @@
 # the file was not being executed using Python interpreter
 
 # For Python v3.x as raw_input() was renamed to input()
-address1 = raw_input("Enter address 1: ")
-print(address1)
-address2 = raw_input("Enter address 2: ")
-print(address2)
-address3 = raw_input("Enter address 3: ")
-print(address3)
-
-# # For now, let's just create lists:
-# address1 = "815 16 St NW Washington D.C. 20005"
-# address2 = "123 SEA LANE SW"
-# address3 = "125 L'Enfant Plaza SW Washington D.C. 22033"
-
-addresses = [address1, address2, address3]
+# # Creating array to hold addresses
+addresses = []
+# # Using range to prompt user to enter an address 3 times
+for number in range(3):
+	address = raw_input("Enter address {0}: ".format(number+1))
+	addresses.append(address)
 print("Address list: {0}\n".format(addresses))
 
 NW = []
