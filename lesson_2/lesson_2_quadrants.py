@@ -54,8 +54,13 @@ elif "SW" in address3:
 	SW.append(address3)
 else:
 	other.append(address3)
-print("List of addresses grouped by quadrant, made using if/elif/else:\n(List 1 = NW, List 2 = NE, List 3 = SE, List 4 = SW, List 5 = Other)")
-print("{0}\n".format(quadrantList))
+
+print("\nList of addresses grouped by quadrant, made using if/elif/else:")
+print("NW List: {0}".format(quadrantList[0]))
+print("NE List: {0}".format(quadrantList[1]))
+print("SE List: {0}".format(quadrantList[2]))
+print("SW List: {0}".format(quadrantList[3]))
+print("Other List: {0}".format(quadrantList[4]))
 
 # # Clearing out quadrant lists
 NW = []
@@ -79,8 +84,12 @@ for address in addresses:
 		SE.append(address)
 	else:
 		other.append(address)
-print("List of addresses grouped by quadrant, made using a loop:\n(List 1 = NW, List 2 = NE, List 3 = SE, List 4 = SW, List 5 = Other)")
-print("{0}\n".format(quadrantList))
+print("\nList of addresses grouped by quadrant, made using a loop:")
+print("NW List: {0}".format(quadrantList[0]))
+print("NE List: {0}".format(quadrantList[1]))
+print("SE List: {0}".format(quadrantList[2]))
+print("SW List: {0}".format(quadrantList[3]))
+print("Other List: {0}".format(quadrantList[4]))
 
 # # Clearing out quadrant lists
 NW = []
@@ -106,4 +115,9 @@ for address in addresses:
 		SE.append(address)
 	else:
 		other.append(address)
-print("List of addresses grouped by quadrant, made using a loop and splitting addresses on ' ':\n{0}\n".format(quadrantList))
+print("\nList of addresses grouped by quadrant, made using a loop and splitting addresses on ' ':")
+print("NW List: {0}".format(quadrantList[0]))
+print("NE List: {0}".format(quadrantList[1]))
+print("SE List: {0}".format(quadrantList[2]))
+print("SW List: {0}".format(quadrantList[3]))
+print("Other List: {0}".format(quadrantList[4]))
