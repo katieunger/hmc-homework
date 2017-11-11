@@ -39,13 +39,16 @@ jelly = 3
 sandwiches = bread/2
 minIngredientQuantity = min(sandwiches, peanutButter, jelly)
 
+# # Loop until I run out of an ingredient (minIngredientQuantity)
 print("Goal 1")
 for number in range(minIngredientQuantity):
 	print("Making sandwich #{0}".format(number+1))
+	# # Decrement the ingredients to account for what was just used to make a sandwich
 	bread = bread-2
 	peanutButter = peanutButter-1
 	jelly = jelly-1
 	sandwiches = bread/2
+	# # Conditional block to determine which ingredient (if any) I've run out of
 	if sandwiches == 0:
 		print("All done; only had enough bread for {0} sandwiches.".format(number+1))
 	elif peanutButter == 0:

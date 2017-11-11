@@ -39,7 +39,8 @@ if (len(stateList)==len(stateAbbreviationList)):
 	for index, state in enumerate(stateList):
 		stateAbbrev = stateAbbreviationList[index]
 		print("<option value='{0}'>{1}</option>".format(stateAbbrev, state))
+	print("</select>")
 else:
 	print("State list and state abbreviation list aren't the same length! You'll get an error!")
-print("</select>")
+
 

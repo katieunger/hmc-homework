@@ -22,6 +22,7 @@
 
 # Using range() and a loop, print out the song.  Your output should look like this:
 
+# # Starting at 99, stopping at one, incrementing by -1
 for number in range(99, 1, -1):
 	print("{0} bottles of beer on the wall, {0} bottles of beer... \nIf one of those bottles should happen to fall, {1} bottles of beer on wall").format(number,number-1)
 

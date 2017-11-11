@@ -15,13 +15,23 @@
 # Remember the % operator will tell you whether a number is evenly divisible by another number! 
 # We use it most often to determine whether a number is even or odd, but it's also useful here.
 
+# # Starting at 1 and stopping at 101
+# # Loop through all numbers
 for number in range(1,101):
+    # # If number is evenly divisible by 3 and 5
+    # # Print "Fizzbuzz"
     if(number%3==0 and number%5==0):
         print("Fizzbuzz")
+    # # If number is evenly divisible by 3
+    # # Print "Fizz"
     elif(number%3==0):
         print("Fizz")
+    # # If number is evenly divisible by 5
+    # # Print "Buzz"
     elif(number%5==0):
         print("Buzz")
+    # # If none of the above are true
+    # # Print the number
     else:
         print(number)
 
