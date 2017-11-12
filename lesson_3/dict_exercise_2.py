@@ -10,7 +10,7 @@ contacts = {
 }
 
 # How to add a new item to an existing dictionary:
-contacts["ZAliya Rahman"] = {
+contacts["Aliya Rahman"] = {
     "twitter": "@AliyaRahman",
     "github": "https://github.com/aliyarahman"
 }
@@ -20,29 +20,10 @@ contacts["ZAliya Rahman"] = {
 #   Keep in mind some people may not have a twitter account, and that's okay!
 
 contacts["Katie"] = {"twitter":"@KatieMode", "github":"https://github.com/katieunger"}
-print(contacts)
+print("Exercise 1:\n{0}\n".format(contacts))
 
 # Exercise 2: Loop through the contacts dictionary to display everyone's contact information.
 #   Your output should look like this:
-
-print(contacts.keys())
-
-for contact in contacts.keys():
-    print(contact)
-
-for contact in contacts.keys():
-    print(contacts[contact])
-
-for contact in sorted(contacts.keys()):
-    print(contacts[contact]["twitter"])
-# # This prints twitter handles alphabetically in order of name!
-
-print(contacts.items())
-
-for contact in sorted(contacts.keys()):
-    print("{0}'s info:".format(contact))
-    print("\t\t\ttwitter: {0}".format(contacts[contact]["twitter"]))
-    print("\t\t\tgithub: {0}".format(contacts[contact]["github"]))
 
 # Hear Me Code's info: 
 #     twitter: @hearmecode
@@ -50,3 +31,33 @@ for contact in sorted(contacts.keys()):
 # Shannon Turner's info: 
 #     twitter: @svt827
 #     github: https://github.com/shannonturner
+
+print("Exercise 2:")
+for contact in sorted(contacts.keys()):
+    print("{0}'s info:".format(contact))
+    print("\ttwitter: {0}".format(contacts[contact]["twitter"]))
+    print("\tgithub: {0}".format(contacts[contact]["github"]))
+
+
+# # This will print the keys of the contacts dictionary as a list:
+print("\nPrinting contacts.keys():")
+print(contacts.keys())
+
+# # This will print each contact's key one by one:
+print("\nFor loop printing each contact in contacts.keys():")
+for contact in contacts.keys():
+    print(contact)
+
+# # This will print the dictionary for each contact one by one:
+print("\nFor loop printing contacts[contact] for each contact in contacts.keys():")
+for contact in contacts.keys():
+    print(contacts[contact])
+
+# # This will print the twitter handle for each contact
+print("\nFor loop printing the twitter handle for each contact in contacts.keys():")
+for contact in sorted(contacts.keys()):
+    print(contacts[contact]["twitter"])
+# # This prints twitter handles alphabetically in order of name!
+
+print("\nPrinting contacts.items():")
+print(contacts.items())
