@@ -22,7 +22,7 @@ schools = {
 #   with the key of "coordinates" and a value containing a list
 #   of two decimal numbers?
 
-coordinatesDictionary = schools["geometry"]
+coordinatesDictionary = schools["geometry"]["coordinates"]
 print(coordinatesDictionary)
 
 # Question 2: What slice will give you the address of the school?
@@ -44,6 +44,6 @@ print(schoolLat)
 # Question 5 (bonus): What slice will give you the marker-color 
 #   without the hashtag in front?
 
-markerColor = schools["properties"]["marker-color"].slice(1)
+markerColor = schools["properties"]["marker-color"][1:]
 print(markerColor)
 
