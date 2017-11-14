@@ -52,12 +52,13 @@ print(states)
 # # .read() will read the entire contents of the file. We're saving these contents into the variable "states"
 # # Outcome:
 	# # 1. Open a file (states.txt)
-	# # 2. Create a variable called states that has the entire contentsof the file states.txt
+	# # 2. Create a variable called states that has the entire contents of the file states.txt
 
- # # states is a string. When we print the first item, we get the letter "A":
+ # # The variable states is a string. When we print the first item, we get the letter "A":
 print(states[0])
 
 # # Let's Try It Out: Text Files
+
 # # .read() gives us the file contents as a string. If we have  a string, we can turn it into a list!
 # # Turning states into a list is useful because now we can get the first state using index, rather than the first letter - the content is more organized
 
@@ -70,9 +71,13 @@ print(states)
 # # For each state, we are splitting that list item on tab into another list (containing state abbreviation and state name)
 # # We use enumerate so that we can put our new state list back into the full states list in the correct place
 
-# for index, state in enumerate(states):
-# 	states[index] = state.split("\t")
-# print(states)
+with open("states.txt", "r") as states_file:
+	states = states_file.read().split("\n")
+
+for index, state in enumerate(states):
+	states[index] = state.split("\t")
+
+print(states)
 
 # # This doesn't work because we aren't saving our state that is split on tab back into the states list
 for state in states:
