@@ -22,6 +22,12 @@ print("</select>")
 # Challenge 2: Save the HTML as states.html instead of printing it to screen.  
 # Your states.html should look identical (or at least similar) to the one you created in the Lesson 2 playtime, except you're getting the states from a file instead of a list.
 
+with open("states.html", "w") as statesSelectFile:
+	statesSelectFile.write("<select>")
+	for state in statesList:
+		statesSelectFile.write("<option value='{0}'>{1}</option>".format(state[0], state[1]))
+	statesSelectFile.write("</select>")
+
 # Challenge 3: Using state_info.csv, create an HTML page that has a table for *each* state with all of the state details.
 
 # Sample output:
