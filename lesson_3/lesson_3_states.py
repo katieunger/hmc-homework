@@ -30,6 +30,33 @@ with open("states.html", "w") as statesSelectFile:
 
 # Challenge 3: Using state_info.csv, create an HTML page that has a table for *each* state with all of the state details.
 
+# # Make a states dictionary using state_info.csv
+with open("state_info.csv", "r") as stateInfoFile:
+	stateInfoList = stateInfoFile.read().split("\n")
+
+for index, state in enumerate(stateInfoList):
+	stateInfoList[index] = state.split(",")
+print(stateInfoList)
+
+statesDictionary = {}
+for state in stateInfoList:
+	statesDictionary[state[1]] = {
+		"popRank":state[0],
+		"popEst":state[2],
+		"houseSeats":state[3],
+		"percentPop":state[4]
+	}
+print(statesDictionary)
+
+# # Use dictionary to write states-table.html
+with open("states-table.html", "w") as statesTableFile:
+	for state in sorted(statesDictionary.keys()): 
+		statesTableFile.write("<table border='1'>\n")
+		statesTableFile.write("\t<tr>\n")
+		statesTableFile.write(("\t\t<td colspan='2'>{0}</td>\n").format(state))
+		statesTableFile.write("</table>\n")
+
+
 # Sample output:
 
 # <table border="1">
