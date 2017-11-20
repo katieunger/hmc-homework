@@ -30,14 +30,23 @@ with open("states.html", "w") as statesSelectFile:
 
 # Challenge 3: Using state_info.csv, create an HTML page that has a table for *each* state with all of the state details.
 
-# # Make a states dictionary using state_info.csv
+# # Read state_info.csv into stateInfoList, splitting on newlines
 with open("state_info.csv", "r") as stateInfoFile:
 	stateInfoList = stateInfoFile.read().split("\n")
+print("{0}\n".format(stateInfoList))
 
+# # Make stateInfoList into a list of smaller lists by splitting on commas
+# # Note that each "row" in CSV is contained in single quotes, and the commas we're concerned with are outside these quotes
 for index, state in enumerate(stateInfoList):
 	stateInfoList[index] = state.split(",")
-print(stateInfoList)
+print("{0}\n".format(stateInfoList))
 
+# # Remove first item from stateInfoList (headers)
+headers = stateInfoList.pop(0)
+print("{0}\n".format(headers))
+print("{0}\n".format(stateInfoList))
+
+# # Make a states dictionary by looping through each state list contained in stateInfoList and making an entry in statesDictionary for each state with attributes for population rank, population estimate, number of House seats, and percent of total population
 statesDictionary = {}
 for state in stateInfoList:
 	statesDictionary[state[1]] = {
@@ -46,16 +55,25 @@ for state in stateInfoList:
 		"houseSeats":state[3],
 		"percentPop":state[4]
 	}
-print(statesDictionary)
+print("{0}\n".format(statesDictionary))
 
 # # Use dictionary to write states-table.html
+# # Using sorted to print states alphabetically by key
 with open("states-table.html", "w") as statesTableFile:
 	for state in sorted(statesDictionary.keys()): 
 		statesTableFile.write("<table border='1'>\n")
 		statesTableFile.write("\t<tr>\n")
 		statesTableFile.write(("\t\t<td colspan='2'>{0}</td>\n").format(state))
-		statesTableFile.write("</table>\n")
-
+		statesTableFile.write("\t</tr>\n")
+		statesTableFile.write("\t<tr>\n")
+		statesTableFile.write("\t\t<td>Rank: {0}</td>\n".format(statesDictionary[state]["popRank"]))
+		statesTableFile.write("\t\t<td>Percent: {0}</td>\n".format(statesDictionary[state]["percentPop"]))
+		statesTableFile.write("\t</tr>\n")
+		statesTableFile.write("\t<tr>\n")
+		statesTableFile.write("\t\t<td>US House Members: {0}</td>\n".format(statesDictionary[state]["houseSeats"]))
+		statesTableFile.write("\t\t<td>Population: {0}</td>\n".format(statesDictionary[state]["popEst"]))
+		statesTableFile.write("\t</tr>\n")
+		statesTableFile.write("</table>\n<hr>\n")
 
 # Sample output:
 
