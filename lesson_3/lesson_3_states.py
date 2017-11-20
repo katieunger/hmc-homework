@@ -92,3 +92,24 @@ with open("states-table.html", "w") as statesTableFile:
 # </table>
 
 # Challenge 4 (Not a Python challenge, but an HTML/Javascript challenge): When you make a choice from the drop-down menu, jump to that state's table.
+
+with open("states-table.html", "w") as statesTableFile:
+	statesTableFile.write("<select>\n")
+	for state in sorted(statesDictionary.keys()):
+		statesTableFile.write("\t<option value='{0}'>{1}</option>\n".format(state, state))
+	statesTableFile.write("</select>\n")
+
+	for state in sorted(statesDictionary.keys()): 
+		statesTableFile.write("<table border='1'>\n")
+		statesTableFile.write("\t<tr>\n")
+		statesTableFile.write(("\t\t<td colspan='2'>{0}</td>\n").format(state))
+		statesTableFile.write("\t</tr>\n")
+		statesTableFile.write("\t<tr>\n")
+		statesTableFile.write("\t\t<td>Rank: {0}</td>\n".format(statesDictionary[state]["popRank"]))
+		statesTableFile.write("\t\t<td>Percent: {0}</td>\n".format(statesDictionary[state]["percentPop"]))
+		statesTableFile.write("\t</tr>\n")
+		statesTableFile.write("\t<tr>\n")
+		statesTableFile.write("\t\t<td>US House Members: {0}</td>\n".format(statesDictionary[state]["houseSeats"]))
+		statesTableFile.write("\t\t<td>Population: {0}</td>\n".format(statesDictionary[state]["popEst"]))
+		statesTableFile.write("\t</tr>\n")
+		statesTableFile.write("</table>\n<hr>\n")
