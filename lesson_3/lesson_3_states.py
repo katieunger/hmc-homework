@@ -49,11 +49,11 @@ print("{0}\n".format(stateInfoList))
 # # Make a states dictionary by looping through each state list contained in stateInfoList and making an entry in statesDictionary for each state with attributes for population rank, population estimate, number of House seats, and percent of total population
 statesDictionary = {}
 for state in stateInfoList:
-	statesDictionary[state[1].replace('"', '')] = {
+	statesDictionary[state[1]] = {
 		"popRank":state[0],
 		"popEst":state[2],
 		"houseSeats":state[3],
-		"percentPop":state[4].replace('"', '')
+		"percentPop":state[4]
 	}
 print("{0}\n".format(statesDictionary))
 
@@ -96,19 +96,19 @@ with open("states-table.html", "w") as statesTableFile:
 with open("states-table-select.html", "w") as statesTableFile:
 	statesTableFile.write("<select onchange='location = this.value;'>\n")
 	for state in sorted(statesDictionary.keys()):
-		statesTableFile.write("\t<option value=#{0}>{1}</option>\n".format(state, state))
+		statesTableFile.write("\t<option value='#{0}'>{1}</option>\n".format(state.replace('"', ''), state.replace('"', '')))
 	statesTableFile.write("</select>\n")
 
 	for state in sorted(statesDictionary.keys()): 
-		statesTableFile.write("<section id='#{0}'>\n".format(state))
-		statesTableFile.write("<h1>{0}</h1>\n".format(state))
+		statesTableFile.write("<section id={0}>\n".format(state))
+		statesTableFile.write("<h1>{0}</h1>\n".format(state.replace('"', '')))
 		statesTableFile.write("<table border='1'>\n")
 		statesTableFile.write("\t<tr>\n")
-		statesTableFile.write(("\t\t<td colspan='2'>{0}</td>\n").format(state))
+		statesTableFile.write(("\t\t<td colspan='2'>{0}</td>\n").format(state).replace('"', ''))
 		statesTableFile.write("\t</tr>\n")
 		statesTableFile.write("\t<tr>\n")
 		statesTableFile.write("\t\t<td>Rank: {0}</td>\n".format(statesDictionary[state]["popRank"]))
-		statesTableFile.write("\t\t<td>Percent: {0}</td>\n".format(statesDictionary[state]["percentPop"]))
+		statesTableFile.write("\t\t<td>Percent: {0}</td>\n".format(statesDictionary[state]["percentPop"].replace('"', '')))
 		statesTableFile.write("\t</tr>\n")
 		statesTableFile.write("\t<tr>\n")
 		statesTableFile.write("\t\t<td>US House Members: {0}</td>\n".format(statesDictionary[state]["houseSeats"]))
